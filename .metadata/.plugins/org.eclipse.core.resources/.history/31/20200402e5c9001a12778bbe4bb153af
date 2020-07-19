@@ -1,0 +1,53 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class GUI {
+	public static void main(String[] args) {
+		
+		JPanel panel = new JPanel();
+		JFrame frame = new JFrame();
+		frame.setSize(350,200);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		
+		panel.setLayout(null);
+		
+		//creating the style for the input
+		JLabel userLabel = new JLabel("User");
+		userLabel.setBounds(10, 20 ,80, 25);
+		panel.add(userLabel);
+		
+		//Text field
+		JTextField userText = new JTextField();
+		userText.setBounds(100, 20, 165, 25);
+		panel.add(userText);
+		
+		//Creating Password 
+		JLabel passwordLabel = new JLabel("Password");
+		passwordLabel.setBounds(10, 50, 80, 35); // x,y, width, height
+		panel.add(passwordLabel);
+		
+		//Field for inputing password 
+		JPasswordField passwordText = new JPasswordField();
+		passwordText.setBounds(100,50,165,25);
+		panel.add(passwordText);
+		
+		//Adding a button
+		JButton button = new JButton("Login");
+		button.setBounds(10,80,80,25);
+		panel.add(button);
+		
+		//Log in Actions
+		//Success Label
+		JLabel success = new JLabel("");
+		success.setBounds(10,110,300,25);
+		panel.add(success);
+				
+		
+		frame.setVisible(true);
+	}
+}
